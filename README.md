@@ -1,4 +1,4 @@
-Repositório destinado a realização da peneira da empresa "Target"
+Repositório destinado a realização de exercícios de lógica para a peneira da empresa "Target"
 
 Técnica:
 
