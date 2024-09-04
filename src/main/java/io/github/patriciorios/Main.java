@@ -10,43 +10,55 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
+        int i = Integer.MAX_VALUE;
 
-        System.out.println("Insira o numero do teste que deseja executar: ");
-        System.out.println("1 - Valor de soma");
-        System.out.println("2 - Fibonacci");
-        System.out.println("3 - Vetor");
-        System.out.println("4 - Valor total mensal da distribuidora");
-        System.out.println("5 - Invertendo a String");
+        while (i != 0) {
+            System.out.println("Insira o numero do teste que deseja executar: ");
 
-        int opcao = scanner.nextInt();
+            System.out.println("1 - Valor de soma");
+            System.out.println("2 - Fibonacci");
+            System.out.println("3 - Vetor");
+            System.out.println("4 - Valor total mensal da distribuidora");
+            System.out.println("5 - Invertendo a String");
+            System.out.println("0 - Sair do programa");
+            int opcao = scanner.nextInt();
 
-        switch(opcao){
-            case 1:
-                ExercicioUm.ValorDaSoma();
-                break;
+            switch (opcao) {
+                case 1:
+                    ExercicioUm.ValorDaSoma();
+                    break;
 
-            case 2:
-                System.out.println("Insira o valor que deseja conferir se pertence a Fibonacci: ");
-                int valor = scanner.nextInt();
-                ExercicioDois.Fibo(valor);
-                break;
+                case 2:
+                    System.out.println("Insira o valor que deseja conferir se pertence a Fibonacci: ");
+                    int valor = scanner.nextInt();
+                    ExercicioDois.Fibo(valor);
+                    break;
 
-            case 3:
-                ExercicioTres.Vetores();
-                break;
-            case 4:
-                ExercicioQuatro.Faturamento();
-                break;
-            case 5:
-                System.out.println("Insira a palavra que deseja inverter: ");
-                scanner.nextLine();
+                case 3:
+                    ExercicioTres.Vetores();
+                    break;
+                case 4:
+                    ExercicioQuatro.Faturamento();
+                    break;
+                case 5:
+                    System.out.println("Insira a palavra que deseja inverter: ");
+                    scanner.nextLine();
 
-                String palavra = scanner.nextLine();
-                ExercicioCinco.InvertendoString(palavra);
-            default:
-                break;
+                    String palavra = scanner.nextLine();
+                    ExercicioCinco.InvertendoString(palavra);
+                    break;
+
+                default:
+                    System.out.println("Insira uma opção válida");
+                    break;
+
+                case 0:
+                    System.out.println("Finalizando a aplicação");
+                    scanner.close();
+                    i = 0;
+                    break;
+            }
         }
     }
 }
